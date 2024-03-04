@@ -23,8 +23,9 @@ class App(Tk):
     def __init__(self):
         Tk.__init__(self)
         self.wm_title(TITLE)
-        self.wm_geometry("600x220")
+        self.wm_geometry("600x300")
         self.wm_resizable(False, False)
+        self.data = []
 
         menubar = Menu(self)
         menubar.add_command(label="Save to JSON",   command=self.data_to_json)
@@ -40,8 +41,7 @@ class App(Tk):
         frame_entries = LabelFrame(self, text="Set URLs and titles")
         Label(frame_entries, text="Title",).grid(row=0, column=0)
         Label(frame_entries, text="URL").grid(row=0, column=1)
-        self.data = []
-        for i in range(1, 6): # TODO: make this dynamic
+        for i in range(1, 11): # TODO: make this dynamic
             self.data.append({"title": StringVar(self, name=f"Name_{i}"), "url": StringVar(self, name=f"URL_{i}")})
             entry_name = Entry(frame_entries, width=32, textvariable=self.data[i-1]["title"])
             entry_name.grid(row=i, column=0)
@@ -70,7 +70,7 @@ class App(Tk):
         data_string_values = [{'title': datum['title'].get(), 'url': datum['url'].get()} for datum in self.data]
         filename = asksaveasfilename(title="Save to JSON", confirmoverwrite=True, defaultextension=".json", filetypes=[("JSON", '.json')], initialdir=os.getcwd())
         with open(filename, "w") as textfile:
-            textfile.write(json.dumps(data_string_values))
+            textfile.write(json.dumps(data_string_values, indent=4))
         return
 
 
