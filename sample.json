@@ -1,24 +1,24 @@
 {
     "sites": [
         {
-            "title": "Reddit",
-            "url": "https://www.reddit.com/"
+            "title": "Google",
+            "url": "https://www.google.com/"
         },
         {
             "title": "GitHub",
-            "url": "https://github.com/WataRain"
+            "url": "https://github.com/"
         },
         {
-            "title": "Stack Overflow",
-            "url": "https://stackoverflow.com/"
+            "title": "CS50x Progress",
+            "url": "https://cs50.me/cs50x"
         },
         {
             "title": "YouTube",
             "url": "https://www.youtube.com/"
         },
         {
-            "title": "Google",
-            "url": "https://www.google.com/"
+            "title": "",
+            "url": ""
         },
         {
             "title": "",
@@ -40,5 +40,7 @@
             "title": "",
             "url": ""
         }
-    ]
+    ],
+    "text_color": "#ffffff",
+    "bg_color": "#10198d"
 }
