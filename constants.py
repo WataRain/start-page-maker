@@ -1,7 +1,7 @@
 COLORS = ["Red", "Green", "Blue"]
 NO_BGCOLOR = "#10198d"
 NO_TEXTCOLOR = "#ffffff"
-TITLE = "Start Page Maker by waflrain (2024)"
+TITLE = "Simple Start Page Maker by waflrain (2024)"
 SUBTITLE = "Submitted as a final project in Harvard's CS50x 2024 course"
 STYLE = """
 html {
@@ -75,6 +75,18 @@ html {
   }
 """
 
-HTML = f"""<!DOCTYPE html><html><head><title>Generated Start Page</title>
-<style>{STYLE}</style></head><body><nav><h1>Start</h1>
-<ul>$$ INSERT CONTENT HERE $$</ul>\n</nav>\n</body>\n</html>"""
+HTML = f"""
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Generated Start Page</title>
+    <style>{STYLE}</style>
+  </head>
+  <body>
+    <nav>
+      <h1>Start</h1>
+      <ul>$$ INSERT CONTENT HERE $$</ul>
+    </nav>
+  </body>
+</html>
+"""
